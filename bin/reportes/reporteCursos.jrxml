@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reporteAlumnos" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a236655e-fecb-4307-b14d-bb244d68d8ae">
+	<property name="ireport.zoom" value="1.2100000000000006"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT
+     curso.`id` AS curso_id,
+     curso.`asignatura` AS curso_asignatura,
+     curso.`ciclo` AS curso_ciclo,
+     curso.`creditos` AS curso_creditos,
+     curso.`horas` AS curso_horas
+FROM
+     `curso` curso]]>
+	</queryString>
+	<field name="curso_id" class="java.lang.Integer"/>
+	<field name="curso_asignatura" class="java.lang.String"/>
+	<field name="curso_ciclo" class="java.lang.String"/>
+	<field name="curso_creditos" class="java.lang.String"/>
+	<field name="curso_horas" class="java.lang.String"/>
+	<group name="Group1">
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<group name="Group2">
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<group name="Group3">
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<group name="Group4">
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="74" backcolor="#006699" uuid="b2f0c822-37cc-4f83-a97c-981837a5e410"/>
+				<staticText>
+					<reportElement x="20" y="20" width="234" height="43" forecolor="#FFFFFF" uuid="78705904-7206-40b9-8130-d4904459a4ce"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Cursos]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="395" y="43" width="180" height="20" forecolor="#FFFFFF" uuid="f9fbcf51-e836-46a9-8add-cce89ac69f5b"/>
+					<textElement textAlignment="Right">
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Lista de cursos]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="29">
+			<staticText>
+				<reportElement x="0" y="0" width="111" height="20" uuid="fbf734e2-6395-4036-804e-5a6050d1e8a4"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cod. Curso]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="111" y="0" width="111" height="20" uuid="8b457069-171e-4f87-bbc1-f2b45d71ce4f"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Asignatura]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="222" y="0" width="111" height="20" uuid="096f2718-b85a-469b-87a0-de457e3cf2dd"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ciclo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="333" y="0" width="111" height="20" uuid="d86dd805-609c-4697-a9af-bb89c881359a"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Creditos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="444" y="0" width="111" height="20" uuid="58702e04-9fad-4906-bf2c-80e07d83eb14"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Horas]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21">
+			<textField>
+				<reportElement x="0" y="0" width="111" height="20" uuid="dce96e7a-d283-453c-ad22-0ee6c4df2981"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{curso_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="0" width="111" height="20" uuid="c7b8a4a2-2f7b-496f-93c5-3b4ac2a2b87a"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{curso_asignatura}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="222" y="0" width="111" height="20" uuid="3e93acc2-6e9a-4d57-8541-7cecd807a407"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{curso_ciclo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="333" y="0" width="111" height="20" uuid="047320fa-5764-4a1c-ade0-9f508daaadf2"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{curso_creditos}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="444" y="0" width="111" height="20" uuid="570876a7-958a-4f51-9583-4c1551e8aac0"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{curso_horas}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="18">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="5" width="515" height="13" backcolor="#E6E6E6" uuid="6378729c-012d-4f4c-b73c-8cabb8d8a14b"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Pagina "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="5" width="40" height="13" backcolor="#E6E6E6" uuid="159c44f4-540d-4176-9cf0-a455bb97847d"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="5" width="100" height="13" uuid="97ba0fe6-d37d-4d09-923d-8cc4eb306abc"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>

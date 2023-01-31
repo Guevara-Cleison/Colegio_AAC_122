@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reporteAlumnos" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a236655e-fecb-4307-b14d-bb244d68d8ae">
+	<property name="ireport.zoom" value="1.2100000000000006"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT
+     retiro.`numReti` AS retiro_numReti,
+     retiro.`numMatricula` AS retiro_numMatricula,
+     retiro.`fecha` AS retiro_fecha,
+     retiro.`hora` AS retiro_hora
+FROM
+     `retiro` retiro]]>
+	</queryString>
+	<field name="retiro_numReti" class="java.lang.Integer"/>
+	<field name="retiro_numMatricula" class="java.lang.Integer"/>
+	<field name="retiro_fecha" class="java.sql.Date"/>
+	<field name="retiro_hora" class="java.sql.Time"/>
+	<group name="Group1">
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<group name="Group2">
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<group name="Group3">
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<group name="Group4">
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="74" backcolor="#006699" uuid="b2f0c822-37cc-4f83-a97c-981837a5e410"/>
+				<staticText>
+					<reportElement x="20" y="20" width="234" height="43" forecolor="#FFFFFF" uuid="78705904-7206-40b9-8130-d4904459a4ce"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Retiros]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="395" y="43" width="180" height="20" forecolor="#FFFFFF" uuid="f9fbcf51-e836-46a9-8add-cce89ac69f5b"/>
+					<textElement textAlignment="Right">
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Lista de los alumnos]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="29">
+			<staticText>
+				<reportElement x="0" y="0" width="138" height="20" uuid="bb559fc0-9e12-443f-a3c2-46d2a6775422"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Num. Retiro]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="138" y="0" width="138" height="20" uuid="978019b4-cb1b-4f1a-af08-cc6be22c18dd"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Num. Matricula]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="276" y="0" width="138" height="20" uuid="b0a694c3-9f8c-4afa-94a8-bd0f9b17f197"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="414" y="0" width="138" height="20" uuid="06d0beca-a544-445a-9b60-77f522ee96ba"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Hora]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21">
+			<textField>
+				<reportElement x="0" y="0" width="138" height="20" uuid="efa4acc6-46c8-46c5-ad4d-2ede19de8cfe"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{retiro_numReti}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="138" y="0" width="138" height="20" uuid="249789cc-c4d6-4eef-bbdc-f2b6e5404bf0"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{retiro_numMatricula}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="276" y="0" width="138" height="20" uuid="140e56fb-ccfa-4e28-92c5-31e4d9411f99"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{retiro_fecha}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="414" y="0" width="138" height="20" uuid="ec5bc597-1fd5-4ead-82f4-df300f95c5be"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{retiro_hora}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="18">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="5" width="515" height="13" backcolor="#E6E6E6" uuid="6378729c-012d-4f4c-b73c-8cabb8d8a14b"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Pagina "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="5" width="40" height="13" backcolor="#E6E6E6" uuid="159c44f4-540d-4176-9cf0-a455bb97847d"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="5" width="100" height="13" uuid="97ba0fe6-d37d-4d09-923d-8cc4eb306abc"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>
